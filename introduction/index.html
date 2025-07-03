@@ -1,23 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Self-Introduction</title>
    <link rel="stylesheet" href="style.css">
+   <script src="https://use.fontawesome.com/releases/v6.7.0/js/all.js"></script>
+   <link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/ungveloper/web-fonts/GmarketSans/font-face.css" />
+   <link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/ungveloper/web-fonts/GmarketSans/font-family.css" />
 </head>
+
 <body>
-   <header>
-      <nav>
-         
+   <div class="container">
+      <header>
+         <p>INTRODUCTION</p>
+         <nav>
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+      </header>
 
-      </nav>
-   </header>
-   <main>
+      <main>
+         <article id="home">
+            <p>안녕하세요!</p>
+            <p>제 이름은 <span>안유리</span>입니다</p>
+            <p>저에 대해 소개드릴게요</p>
+            <img src="memoji.png" alt="Memoji">
+         </article>
 
-   </main>
-   <footer>
+         <section id="about">
+            <h3>ABOUT</h3>
 
-   </footer>
+            <div class="about-detail">
+
+               <div class="about-detail-top">
+
+                  <div class="about-detail-top-info">
+                     <p>NAME</p>
+                     <p>DOB</p>
+                     <p>HOME</p>
+                     <p>SCHOOL</p>
+                  </div>
+
+                  <div class="about-detail-top-desc">
+                     <p>안유리</p>
+                     <p>2002.05.09</p>
+                     <p>부산광역시 금정구</p>
+                     <p>부산대학교/수학과</p>
+                  </div>
+               </div>
+
+               <div class="about-detail-bottom">
+
+                  <div class="about-detail-bottom-info skills">
+                     <h4>SKILLS</h4>
+                     <div class="about-detail-bottom-desc skills-desc">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JAVASCRIPT</p>
+                     </div>
+                  </div>
+
+                  <div class="about-detail-bottom-info education">
+                     <h4>EDUCATION</h4>
+                     <div class="about-detail-bottom-desc education-desc">
+                        <p>2022.03~ 부산대학교 수학과 (연계전공: 빅데이터)</p>
+                        <p>2018.03~2021.02 금오여자고등학교 졸업</p>
+                     </div>
+                  </div>
+
+                  <div class="about-detail-bottom-info activities">
+                     <h4>ACTIVITIES</h4>
+                     <div class="about-detail-bottom-desc activities-desc">
+                        <p>2022.12~2023.12 학과 학생회: 학습부장</p>
+                        <p>2023.12~2024.12 학과 학생회: 부학생회장</p>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+
+         <section id="contact">
+
+            <h3>CONTACT</h3>
+
+            <div class="contact-detail">
+
+               <div class="contact-detail-info">
+                  <i class="fa-solid fa-phone icon"></i>
+                  <h5>Phone</h5>
+                  <p>010-5644-5615</p>
+               </div>
+
+               <div class="contact-detail-info">
+                  <a href="https://github.com/dububuri/frontend-bootcamp.git">
+                     <i class="fa-brands fa-github icon" style="color: black"></i>
+                  </a>
+                  <h5>GitHub</h5>
+                  <p>Click!</p>
+               </div>
+
+               <div class="contact-detail-info">
+                  <i class="fa-solid fa-envelope icon"></i>
+                  <h5>E-mail</h5>
+                  <p>sod083210@naver.com</p>
+               </div>
+
+            </div>
+         </section>
+
+      </main>
+
+      <footer>
+         <div>DATE / CLOCK</div>
+      </footer>
+   </div>
 </body>
+
 </html>
