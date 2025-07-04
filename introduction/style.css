@@ -160,7 +160,8 @@ main {
 
 /* footer */
 footer {
-   background-color: #E5E0D8;
+   background-color: #2A4759;
+   color: #fff;
    padding: 20px;
    justify-items: center;
 }

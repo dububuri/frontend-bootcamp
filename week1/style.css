@@ -1,0 +1,57 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 40%;
+   margin: 20px;
+}
+
+h1 {
+   margin: 10px;
+}
+
+.float {
+   float: left;
+   width: 100px;
+   height: 100px;
+   margin: 20px;
+   background-color:bisque;
+   text-align: center;
+}
+
+p {
+   margin: 10px;
+}
+
+.flex-box {
+   display: flex;
+   align-items: center;
+}
+
+.flex-box > div {
+   background-color:black;
+   color: azure;
+   padding: 10px;
+   margin: 10px;
+}
+
+
+.box1 {
+   background-color:rgb(255, 240, 221);
+   margin: 20px;
+}
+
+.box2 {
+   background-color: rgb(212, 255, 242);
+   padding: 20px;
+}
+
+.box3 {
+   background-color: rgb(231, 255, 207);
+   border-radius: 10px;
+   margin: 20px;
+   padding: 20px
+}
