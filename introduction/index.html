@@ -19,6 +19,7 @@ https://velog.io/@rhfovk/%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4
 <body>
    <div class="container">
       <header>
+         <!-- 보통 이 header에 있는걸 h1으로 둠 -->
          <p>INTRODUCTION</p>
          <nav>
             <ul>
@@ -30,6 +31,8 @@ https://velog.io/@rhfovk/%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4
       </header>
 
       <main>
+         <!-- article 대신 section 태그 사용 -->
+         <!-- article은 독립적이고 재사용하는 콘텐츠임 -->
          <article id="home">
             <p>안녕하세요!</p>
             <p>제 이름은 <span>안유리</span>입니다</p>
@@ -38,6 +41,7 @@ https://velog.io/@rhfovk/%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4
          </article>
 
          <section id="about">
+            <!-- 그리고 이 section에 있는것들을 h2로 두기 -->
             <h1>ABOUT</h1>
 
             <div class="about-detail">
@@ -98,6 +102,7 @@ https://velog.io/@rhfovk/%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4
 
                <div class="contact-detail-info">
                   <i class="fa-solid fa-phone icon"></i>
+                  <!-- 얘네는 순서상 h3로 사용, hn 태그는 중간 레벨 뛰어넘지 말기 -->
                   <h4>Phone</h4>
                   <p>010-5644-5615</p>
                </div>

@@ -4,6 +4,7 @@
    box-sizing: border-box; /* padding을 width 내에 포함 */
 }
 
+
 /* body */
 body {
    display: flex;
@@ -16,12 +17,14 @@ body {
    width: 600px;
 }
 
+
 /* header */
 header {
    background-color: #F8F8F8;
    padding: 20px;
    display: flex;
    align-items: center;
+   justify-content: space-between;
 }
 
 header p {
@@ -30,9 +33,11 @@ header p {
 }
 
 nav {
-   display: flex;
-   justify-content: flex-end;
-   width: 100%; /* 이걸 하지 않으면 오른쪽 정렬이 되지 않습니다. 이유가 궁금합니다 */
+   /* display: flex; */
+   /* justify-content: flex-end; */
+   /* width: 100%; */
+   /* 이걸 하지 않으면 오른쪽 정렬이 되지 않습니다. 이유가 궁금합니다 */
+   /* justify-content: flex-end 해당 속성은 nav 태그 내에 있는 자식 요소들에 적용 */
 }
 
 nav ul {
@@ -157,6 +162,7 @@ main {
 .icon {
    font-size: 40px;
 }
+
 
 /* footer */
 footer {
