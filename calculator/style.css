@@ -50,7 +50,7 @@ p {
    margin-top: 10px;
 }
 
-.buttons {
+.button-4box {
    display: flex;
    justify-content: space-between;
    gap: 10px;
