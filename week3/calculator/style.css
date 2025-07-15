@@ -1,0 +1,106 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'GmarketSans';
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+
+/* calculator */
+.calculator {
+   padding: 30px;
+   background-color: #393E46;
+   border-radius: 20px;
+   /* px는 정확하고 일정하게: 버튼, 카드
+      %는 요소 크기에 따라 변화 (상대적): 50%로 원형, 반응형 등 */
+   box-shadow: inset 0 -8px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* display */
+.display-area {
+   margin-bottom: 20px;
+}
+
+p {
+   display: flex;
+   justify-content: end;
+   padding: 10px 20px;
+   font-size: 40px;
+   font-weight: semi-bold;
+   background-color: #F2F2F2;
+   color: #222831;
+   border-radius: 10px;
+   box-shadow: inset 0 -5px 2px rgba(150, 150, 150, 0.579);
+}
+
+
+/* button */
+.button-area {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+.button-4box {
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+button {
+   width: 60px;
+   height: 60px;
+   border: none;
+   border-radius: 10px;
+}
+
+.etc {
+   background-color: #FFF8DE;
+   color: #222831;
+   font-size: 25px;
+   font-weight: 600;
+   
+   box-shadow: inset 0 -4px 2px rgba(250, 200, 100, 0.5);
+}
+
+.etc:active {
+   background-color: #f2e6b9;
+}
+
+.nums {
+   background-color: #EEEEEE;
+   color: #222831;
+   font-size: 30px;
+   font-weight: 600;
+   box-shadow: inset 0 -4px 2px rgba(150, 150, 150, 0.579);
+}
+
+.nums:active {
+   background-color: #d6d6d6;
+}
+
+.operator {
+   background-color: #00ADB5;
+   color: #EEEEEE;
+   font-size: 35px;
+   font-weight: 600;
+   box-shadow: inset 0 -4px 2px rgba(0, 100, 120, 0.5);
+}
+
+.operator:active {
+   background-color: #008f94;
+}
+
+.equal:active {
+   background-color: #fca062c5;
+   box-shadow: inset 0 -4px 2px rgba(100, 50, 0, 0.3);
+}
