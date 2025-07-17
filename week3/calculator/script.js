@@ -11,6 +11,7 @@ let curNum = '0';     // 현재 값
 let firstNum = '';    // 계산 할 첫 번째 숫자
 let secondNum = '';   // 계산 할 두 번째 숫자
 let operator = '';    // 연산자
+let expression = '';  // 계산 과정
 
 buttons.forEach((item) => {
    item.addEventListener('click', (e) => { // 모든 button에 click 이벤트 적용
@@ -19,7 +20,7 @@ buttons.forEach((item) => {
 
       // 숫자 처리
       if (item.classList.contains('number')) { // 버튼 클래스에 num이 있다면
-         if (curNum.length >= 12 && clicked !== '.') return; // 12자리 제한
+         if (curNum.length >= 11 && clicked !== '.') return; // 11자리 제한
          if (curNum === '0') curNum = clicked; // 0이면 새 숫자로
          else curNum += clicked; // 0이 아니면 뒤에 숫자 누적
          display.textContent = curNum; // 화면에 표시
@@ -28,6 +29,7 @@ buttons.forEach((item) => {
       // 소수점
       if (clicked === '.') {
          if (!curNum.includes('.')) curNum += '.'; // 소수점이 없을 때만 붙이기
+         display.textContent = curNum; // 화면에 표시
       }
 
       // Clear
@@ -55,15 +57,14 @@ buttons.forEach((item) => {
       // Percent
       if (clicked === '%' && curNum !== '0') {
          // 문자 → 숫자로 변환하여 계산
-         curNum = limitlength(parseFloat(curNum) / 120);
+         curNum = limitlength(parseFloat(curNum) / 100);
          display.textContent = curNum; // 화면에 표시
          return;
       }
 
       // Root
       if (clicked === '√' && curNum !== '0') {
-         // 문자 → 숫자로 변환하여 계산
-         // JS 내장함수인 Math의 루트 사용
+         // 문자 → 숫자로 변환하여 계산 (JS 내장함수인 Math의 루트 사용)
          curNum = limitlength(Math.sqrt(parseFloat(curNum)));
          display.textContent = curNum; // 화면에 표시
          return;
@@ -71,12 +72,6 @@ buttons.forEach((item) => {
 
       // Operator
       if (item.classList.contains('operator')) {
-
-         // operator 존재 & 입력된 숫자가 0
-         if (operator && curNum === '0') {
-            operator = clicked; // → 연산자 변경
-            return;
-         }
 
          // operator 존재 & 첫 번째 숫자 존재 → 연산 가능
          if (operator && firstNum !== '') {
@@ -115,31 +110,31 @@ buttons.forEach((item) => {
    })
 })
 
-// 12 자리수 여부 check 함수
+// 11 자리수 여부 check 함수
 const limitlength = (result) => {
-   // 정수부가 12자리 이상이면 Error
-   if (!String(result).includes('.') && String(result).length > 12) {
+   // 정수부가 11자리 이상이면 Error
+   if (!String(result).includes('.') && String(result).length > 11) {
       return 'Error';
    }
 
-   // 소수점 존재할 때, 정수 + 소수 길이 합이 12을 넘으면 소수점 아래 부분 자르기
+   // 소수점 존재할 때, 정수 + 소수 길이 합이 11을 넘으면 소수점 아래 부분 자르기
    if (String(result).includes('.')) {
       // result를 정수부분과 소수부분으로 나누기
       const [intResult, decResult] = String(result).split('.');
 
-      // 정수부 > 12 이면 Error
-      if (intResult.length > 12) return 'Error';
+      // 정수부 > 11 이면 Error
+      if (intResult.length > 11) return 'Error';
 
-      // 정수 + 소수점 + 소수 > 12 이면
-      if (String(result).length > 12) {
-         // 소수 부분을 12자리수에 맞춰서 자르기
-         return intResult + '.' + decResult.slice(0, 12 - intResult.length - 1)
+      // 정수 + 소수점 + 소수 > 11 이면
+      if (String(result).length > 11) {
+         // 소수 부분을 11자리수에 맞춰서 자르기
+         return intResult + '.' + decResult.slice(0, 11 - intResult.length - 1)
       }
 
       return intResult + '.' + decResult;
    }
 
-   // 12자리 이하면 그대로
+   // 11자리 이하면 그대로
    return String(result);
 }
 
