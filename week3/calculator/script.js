@@ -7,7 +7,7 @@ const display = document.querySelector('.display-area p');
 const buttons = document.querySelectorAll('button');
 
 // 초기화
-let curNum = '0';         // 현재 값
+let curNum = '0';     // 현재 값
 let firstNum = '';    // 계산 할 첫 번째 숫자
 let secondNum = '';   // 계산 할 두 번째 숫자
 let operator = '';    // 연산자
