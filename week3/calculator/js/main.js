@@ -87,7 +87,6 @@ buttons.forEach((item) => {
          }
 
          operator = clicked;
-         console.log(`First Operand: ${firstNum}, Operator: ${operator}`);
          return;
       }
 
@@ -103,6 +102,7 @@ buttons.forEach((item) => {
             secondNum = ''; 
             operator = '';
             curNum = result; // 현재값에 결과 저장 → 연속해서 연산하기 위해
+            // 질문이 있습니다! 이렇게 하여도 연속 연산이 되지 않는데, 어떻게 고쳐야할까요?
          }
          return;
       }
