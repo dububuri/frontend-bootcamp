@@ -1,6 +1,5 @@
-// JS 참고 코드
-// https://github.com/mj-archive/oz_study/tree/main/JavaScript/calculator
-// https://medium.com/@koreanraichu/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-%EA%B3%84%EC%82%B0%EA%B8%B0%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-2ecddd7140ed
+import { calculate } from './calculate.js'
+import { limitlength } from './limitlength.js'
 
 // 모든 요소를 각 변수로 할당
 const display = document.querySelector('.display-area p');
@@ -109,56 +108,3 @@ buttons.forEach((item) => {
       }
    })
 })
-
-// 11 자리수 여부 check 함수
-const limitlength = (result) => {
-   // 정수부가 11자리 이상이면 Error
-   if (!String(result).includes('.') && String(result).length > 11) {
-      return 'Error';
-   }
-
-   // 소수점 존재할 때, 정수 + 소수 길이 합이 11을 넘으면 소수점 아래 부분 자르기
-   if (String(result).includes('.')) {
-      // result를 정수부분과 소수부분으로 나누기
-      const [intResult, decResult] = String(result).split('.');
-
-      // 정수부 > 11 이면 Error
-      if (intResult.length > 11) return 'Error';
-
-      // 정수 + 소수점 + 소수 > 11 이면
-      if (String(result).length > 11) {
-         // 소수 부분을 11자리수에 맞춰서 자르기
-         return intResult + '.' + decResult.slice(0, 11 - intResult.length - 1)
-      }
-
-      return intResult + '.' + decResult;
-   }
-
-   // 11자리 이하면 그대로
-   return String(result);
-}
-
-const calculate = (num1, operator, num2) => {
-   num1 = parseFloat(num1);
-   num2 = parseFloat(num2);
-   let result = 0;
-   switch (operator) {
-      case '+':
-         result = num1 + num2;
-         break;
-      case '−':
-         result = num1 - num2;
-         break;
-      case '×':
-         result = num1 * num2;
-         break;
-      case '÷':
-         result = num1 / num2;
-         break;
-      default:
-         console.log('Error');
-         break;
-   }
-
-   return limitlength(result);
-}
