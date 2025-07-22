@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>To-do-List</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <main class="container">
+      <div class="to-do-list">
+         <h1>To-Do List 🪴</h1>
+
+         <div class="input-box">
+            <input type="text" id="task-input" placeholder="Add your task">
+            <button id="addBtn" onclick="addTask()">ADD</button>
+         </div>
+
+         <ul id="task-list">
+            <!-- 할 일 항목 JS에서 생성 -->
+            <li>
+               <input type="checkbox" class="checkbox">
+               <span class="task-text">To do</span>
+               <button class="deleteBtn">&#x2715;</button>
+            </li>
+            <li>
+               <input type="checkbox" class="checkbox">
+               <span class="task-text">To do</span>
+               <button class="deleteBtn">&#x2715;</button>
+            </li>
+         </ul>
+      </div>
+   </main>
+   <script src="script.js"></script>
+</body>
+
+</html>

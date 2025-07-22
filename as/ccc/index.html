@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="left">
+        <button class="power">⏻</button>
+        <div class="clock">
+            <div class="date">yyyy-mm-dd</div>
+            <div class="time">hh : mm : ss</div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="battery">
+            <img class="battery-img" alt="battery100%" src="assets/images/battery100.png">
+            <span class="battery-text">100%</span>
+        </div>
+        <div class="alarm-setting">
+            <input type="number" class="alarm-hour" placeholder="hh" min="0" max="23">  <!--type을 time으로 하면 초가 없음-->
+            <input type="number" class="alarm-minute" placeholder="mm" min="0" max="60">
+            <input type="number" class="alarm-second" placeholder="ss" min="0" max="60">
+            <button class="alarm-add">추가</button>
+        </div>
+        <div class="alarm-list">
+            <div class = "first-alarm"></div>
+            <div class = "second-alarm"></div>
+            <div class = "third-alarm"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

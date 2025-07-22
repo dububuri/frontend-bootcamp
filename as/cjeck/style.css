@@ -1,0 +1,34 @@
+table {
+   border: 4px solid black;
+   margin: 10px;
+   padding: 20px;
+   background-color: rgb(201, 198, 198);
+}
+input {
+   margin: 20px 10px;
+   width: 200px;
+   height: 40px;
+   border-width: 3px;
+}
+th, td {text-align: center;}
+.basicop{
+   background-color: rgba(232, 149, 61, 0.622);
+   
+}
+.op{
+   background-color: rgb(132, 130, 130);
+}
+button{
+   border-width: 3px;
+   height: 40px;
+   width: 40px;
+   margin: 3px;
+   text-align: center;
+   font-weight: 600;
+   font-size: 17px;
+}
+.result{
+   width: 100px;
+   height: 40px;
+   background-color: rgba(188, 204, 154, 0.589);
+}
