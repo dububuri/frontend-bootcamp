@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign-Up</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <script src="https://use.fontawesome.com/releases/v6.7.0/js/all.js"></script>
+</head>
+
+<body>
+   <main>
+      <div class="sign-up">
+         <i class="fa-solid fa-arrow-rotate-right"></i>
+         <h1>SIGN UP FOR A<br>NEW ACCOUNT</h1>
+
+         <div class="input-box">
+            <div class="id-box">
+               <input type="text" id="id-input" placeholder="Id">
+               <button id="idBtn">Check</button>
+            </div>
+            <p id="id-msg">Checking Id</p>
+
+            <input type="password" id="password-input" placeholder="Password">
+
+            <ul class="password-conditions">
+               <li class="invalid"><i class="fa-solid fa-check"></i> At least 8 characters</li>
+               <li class="invalid"><i class="fa-solid fa-check"></i> At least one uppercase letter</li>
+               <li class="invalid"><i class="fa-solid fa-check"></i> At least one number</li>
+               <li class="invalid"><i class="fa-solid fa-check"></i> At least one special character</li>
+            </ul>
+            <button id="signBtn">Sign Up</button>
+         </div>
+      </div>
+   </main>
+   <script src="script.js"></script>
+</body>
+
+</html>
