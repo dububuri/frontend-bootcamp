@@ -1,5 +1,5 @@
 export function resetForm() {
-   console.log('🚀 resetForm 실행됨!');
+   console.log('resetForm 실행됨');
    document.getElementById('id-input').value = '';
    document.getElementById('password-input').value = '';
 
